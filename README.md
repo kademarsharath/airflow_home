@@ -24,8 +24,9 @@ airflow webserver -D
 
 airflow scheduler -D
 
-#Navigate to web browser and see the completed DAG
+#Navigate to web browser and see the completed DAG: http://0.0.0.0:8080/admin/
 
-#Execute the below to test individual dag:
+#You can also execute the below to test individual dag:
 
-airflow test  test_dag ETL 2020-04-27
+airflow test  test_dag ETL 2020-04-27. 
+#test_dag is the name of DAG and ETL is the task under the dag
