@@ -1,3 +1,4 @@
+# AUTHOR: Sharath; 
 from datetime import timedelta
 # The DAG object; we'll need this to instantiate a DAG
 from airflow import DAG
@@ -12,6 +13,8 @@ from sqlalchemy import create_engine
 import pymysql
 import sqlite3
 conn = sqlite3.connect('/Users/ksharath/projects/airflow_home/airflow.db')
+#engine = create_engine('mysql+pymysql://root:@localhost/sharath')
+#We can change the connection parameters here to change the database 
 
 
 # These args will get passed on to each operator
@@ -61,9 +64,6 @@ oauth_data = [{
             "Secret":"9u8YIFulAavSx2VW4x5lzDwklW8DKlbo9nQsEhwx"
         }]
 
-#engine = create_engine('mysql+pymysql://root:@localhost/sharath')
-
-#We can change the connection parameters here to change the database 
 class ETL: #Class to instatiate the ETL with parameters 
     def __init__(self,category,ds,atype):
         self.base_url='https://api.publicapis.org/entries?'
