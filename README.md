@@ -9,7 +9,7 @@ pip install email_validator
 git clone https://github.com/kademarsharath/airflow_home.git
 
 #Export the home path: 
-export AIRFLOW_HOME=``pwd``/airflow_home
+export AIRFLOW_HOME=\`pwd\`/airflow_home
 
 #Navigate to homepath:
 
